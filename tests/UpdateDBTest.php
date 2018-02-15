@@ -119,9 +119,9 @@ LOG
             ],
             [
                 // The last successfully completed update. This means that the
-                // updates starting with woot_update_8102() will be performed in
+                // updates starting with woot_update_8103() will be performed in
                 // the test.
-                8101,
+                8102,
                 // The expected status report that will be output before the
                 // test is initiated.
                 <<<LOG
