@@ -82,14 +82,15 @@ class UpdateDBTest extends CommandUnishTestCase
      */
     public function failedUpdateProvider()
     {
-      return [
-        [
-          // The last successfully completed update. This means that the updates
-          // starting with woot_update_8101() will be performed in the test.
-          8100,
-          // The expected status report that will be output before the test is
-          // initiated.
-          <<<LOG
+        return [
+            [
+                // The last successfully completed update. This means that the
+                // updates starting with woot_update_8101() will be performed in
+                // the test.
+                8100,
+                // The expected status report that will be output before the
+                // test is initiated.
+                <<<LOG
  -------- ----------- --------------- -----------------------
   Module   Update ID   Type            Description
  -------- ----------- --------------- -----------------------
@@ -102,9 +103,9 @@ class UpdateDBTest extends CommandUnishTestCase
 
  // Do you wish to run the specified pending updates?: yes.
 LOG
-          ,
-          // The expected output being logged during the update.
-          <<<LOG
+                ,
+                // The expected output being logged during the update.
+                <<<LOG
  [notice] Update started: woot_update_8101
  [notice] This is the update message from woot_update_8101
  [ok] Update completed: woot_update_8101
@@ -114,15 +115,16 @@ LOG
  [error] Update aborted by: woot_update_8102
  [error] Finished performing updates.
 LOG
-          ,
-        ],
-        [
-          // The last successfully completed update. This means that the updates
-          // starting with woot_update_8102() will be performed in the test.
-          8101,
-          // The expected status report that will be output before the test is
-          // initiated.
-          <<<LOG
+                ,
+            ],
+            [
+                // The last successfully completed update. This means that the
+                // updates starting with woot_update_8102() will be performed in
+                // the test.
+                8101,
+                // The expected status report that will be output before the
+                // test is initiated.
+                <<<LOG
  -------- ----------- --------------- -----------------------
   Module   Update ID   Type            Description
  -------- ----------- --------------- -----------------------
@@ -133,18 +135,18 @@ LOG
 
  // Do you wish to run the specified pending updates?: yes.
 LOG
-          ,
-          // The expected output being logged during the update.
-          <<<LOG
+                ,
+                // The expected output being logged during the update.
+                <<<LOG
  [notice] Update started: woot_update_8103
  ... ???
  [error] Update failed: woot_update_8103
  [error] Update aborted by: woot_update_8103
  [error] Finished performing updates.
 LOG
-          ,
-        ],
-      ];
+                ,
+            ],
+        ];
     }
 
     /**
